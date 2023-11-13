@@ -22,12 +22,12 @@ public class ToDoController {
     }
 
 
-    @PostMapping
+    @PostMapping("/add")
     public  List<Todo> createTodo(@RequestBody ToDoRequest todo){
         return toDoService.createTodo(todo);
     }
 
-    @PutMapping
+    @PutMapping("/update/{todo}")
     public  List<Todo> updateTodo(@RequestBody ToDoRequest todo){
         return toDoService.updateTodo(todo);
     }
